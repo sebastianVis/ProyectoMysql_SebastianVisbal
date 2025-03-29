@@ -268,6 +268,22 @@
 											"top": 421,
 											"width": 189.51416015625,
 											"height": 13
+										},
+										{
+											"_type": "ERDColumnView",
+											"_id": "AAAAAAGV4DB2dSIADOw=",
+											"_parent": {
+												"$ref": "AAAAAAGV3JVkANVPvv4="
+											},
+											"model": {
+												"$ref": "AAAAAAGV4DB2ZyH9iuw="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 357,
+											"top": 436,
+											"width": 189.51416015625,
+											"height": 13
 										}
 									],
 									"font": "Arial;13;0",
@@ -275,7 +291,7 @@
 									"left": 352,
 									"top": 311,
 									"width": 199.51416015625,
-									"height": 128
+									"height": 143
 								}
 							],
 							"font": "Arial;13;0",
@@ -283,7 +299,7 @@
 							"left": 352,
 							"top": 288,
 							"width": 199.51416015625,
-							"height": 151,
+							"height": 166,
 							"nameLabel": {
 								"$ref": "AAAAAAGV3JVkANVOujk="
 							},
@@ -447,9 +463,9 @@
 									"parentStyle": true,
 									"left": 8,
 									"top": 605,
-									"width": 193.71875,
+									"width": 216.8369140625,
 									"height": 13,
-									"text": "estado"
+									"text": "departamento"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -474,7 +490,7 @@
 											"parentStyle": true,
 											"left": 13,
 											"top": 628,
-											"width": 183.71875,
+											"width": 206.8369140625,
 											"height": 13
 										},
 										{
@@ -490,7 +506,7 @@
 											"parentStyle": true,
 											"left": 13,
 											"top": 643,
-											"width": 183.71875,
+											"width": 206.8369140625,
 											"height": 13
 										},
 										{
@@ -506,7 +522,7 @@
 											"parentStyle": true,
 											"left": 13,
 											"top": 658,
-											"width": 183.71875,
+											"width": 206.8369140625,
 											"height": 13
 										}
 									],
@@ -514,7 +530,7 @@
 									"parentStyle": true,
 									"left": 8,
 									"top": 623,
-									"width": 193.71875,
+									"width": 216.8369140625,
 									"height": 53
 								}
 							],
@@ -522,7 +538,7 @@
 							"parentStyle": false,
 							"left": 8,
 							"top": 600,
-							"width": 193.71875,
+							"width": 216.8369140625,
 							"height": 76,
 							"nameLabel": {
 								"$ref": "AAAAAAGV3JWN5tVoYp8="
@@ -1441,7 +1457,7 @@
 									"parentStyle": true,
 									"left": 8,
 									"top": 477,
-									"width": 172.77783203125,
+									"width": 216.8369140625,
 									"height": 13,
 									"text": "pais"
 								},
@@ -1468,7 +1484,7 @@
 											"parentStyle": true,
 											"left": 13,
 											"top": 500,
-											"width": 162.77783203125,
+											"width": 206.8369140625,
 											"height": 13
 										},
 										{
@@ -1485,7 +1501,7 @@
 											"parentStyle": true,
 											"left": -19,
 											"top": 643,
-											"width": 188.77783203125,
+											"width": 206.8369140625,
 											"height": 13
 										},
 										{
@@ -1501,7 +1517,7 @@
 											"parentStyle": true,
 											"left": 13,
 											"top": 515,
-											"width": 162.77783203125,
+											"width": 206.8369140625,
 											"height": 13
 										},
 										{
@@ -1517,7 +1533,7 @@
 											"parentStyle": true,
 											"left": 13,
 											"top": 530,
-											"width": 162.77783203125,
+											"width": 206.8369140625,
 											"height": 13
 										}
 									],
@@ -1525,7 +1541,7 @@
 									"parentStyle": true,
 									"left": 8,
 									"top": 495,
-									"width": 172.77783203125,
+									"width": 216.8369140625,
 									"height": 53
 								}
 							],
@@ -1533,7 +1549,7 @@
 							"parentStyle": false,
 							"left": 8,
 							"top": 472,
-							"width": 172.77783203125,
+							"width": 216.8369140625,
 							"height": 76,
 							"nameLabel": {
 								"$ref": "AAAAAAGV3LvVgdbrG8w="
@@ -1562,7 +1578,7 @@
 									"parentStyle": true,
 									"left": 8,
 									"top": 741,
-									"width": 172.77783203125,
+									"width": 216.8369140625,
 									"height": 13,
 									"text": "ciudad"
 								},
@@ -1589,7 +1605,7 @@
 											"parentStyle": true,
 											"left": 13,
 											"top": 764,
-											"width": 162.77783203125,
+											"width": 206.8369140625,
 											"height": 13
 										},
 										{
@@ -1605,7 +1621,7 @@
 											"parentStyle": true,
 											"left": 13,
 											"top": 779,
-											"width": 162.77783203125,
+											"width": 206.8369140625,
 											"height": 13
 										},
 										{
@@ -1621,7 +1637,7 @@
 											"parentStyle": true,
 											"left": 13,
 											"top": 794,
-											"width": 162.77783203125,
+											"width": 206.8369140625,
 											"height": 13
 										},
 										{
@@ -1637,7 +1653,7 @@
 											"parentStyle": true,
 											"left": 13,
 											"top": 809,
-											"width": 162.77783203125,
+											"width": 206.8369140625,
 											"height": 13
 										}
 									],
@@ -1645,7 +1661,7 @@
 									"parentStyle": true,
 									"left": 8,
 									"top": 759,
-									"width": 172.77783203125,
+									"width": 216.8369140625,
 									"height": 68
 								}
 							],
@@ -1653,7 +1669,7 @@
 							"parentStyle": false,
 							"left": 8,
 							"top": 736,
-							"width": 172.77783203125,
+							"width": 216.8369140625,
 							"height": 91,
 							"nameLabel": {
 								"$ref": "AAAAAAGV3Lw6OdcHXns="
@@ -2488,7 +2504,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": false,
 									"left": 463,
-									"top": 460,
+									"top": 468,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -2506,7 +2522,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": false,
 									"left": 464,
-									"top": 458,
+									"top": 473,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -2542,7 +2558,7 @@
 								"$ref": "AAAAAAGV3JVkANVNGUo="
 							},
 							"lineStyle": 2,
-							"points": "449:439;449:496",
+							"points": "449:454;449:496",
 							"nameLabel": {
 								"$ref": "AAAAAAGV3qMofrYaDC8="
 							},
@@ -4677,6 +4693,94 @@
 							"headNameLabel": {
 								"$ref": "AAAAAAGV3snbgLlp+2o="
 							}
+						},
+						{
+							"_type": "ERDEntityView",
+							"_id": "AAAAAAGV4DCj6iIHKhM=",
+							"_parent": {
+								"$ref": "AAAAAAGV3Hl6ItUw7pk="
+							},
+							"model": {
+								"$ref": "AAAAAAGV4DCj6iIFaU8="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGV4DCj6iIIkYM=",
+									"_parent": {
+										"$ref": "AAAAAAGV4DCj6iIHKhM="
+									},
+									"font": "Arial;13;1",
+									"parentStyle": true,
+									"left": 128,
+									"top": 157,
+									"width": 172.77783203125,
+									"height": 13,
+									"text": "estados"
+								},
+								{
+									"_type": "ERDColumnCompartmentView",
+									"_id": "AAAAAAGV4DCj6iIJ+No=",
+									"_parent": {
+										"$ref": "AAAAAAGV4DCj6iIHKhM="
+									},
+									"model": {
+										"$ref": "AAAAAAGV4DCj6iIFaU8="
+									},
+									"subViews": [
+										{
+											"_type": "ERDColumnView",
+											"_id": "AAAAAAGV4DCspyIVrP4=",
+											"_parent": {
+												"$ref": "AAAAAAGV4DCj6iIJ+No="
+											},
+											"model": {
+												"$ref": "AAAAAAGV4DCsniISuaA="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 133,
+											"top": 180,
+											"width": 162.77783203125,
+											"height": 13
+										},
+										{
+											"_type": "ERDColumnView",
+											"_id": "AAAAAAGV4DDnQiIe2yY=",
+											"_parent": {
+												"$ref": "AAAAAAGV4DCj6iIJ+No="
+											},
+											"model": {
+												"$ref": "AAAAAAGV4DDnOiIbOno="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 133,
+											"top": 195,
+											"width": 162.77783203125,
+											"height": 13
+										}
+									],
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 128,
+									"top": 175,
+									"width": 172.77783203125,
+									"height": 38
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"left": 128,
+							"top": 152,
+							"width": 172.77783203125,
+							"height": 61,
+							"nameLabel": {
+								"$ref": "AAAAAAGV4DCj6iIIkYM="
+							},
+							"columnCompartment": {
+								"$ref": "AAAAAAGV4DCj6iIJ+No="
+							}
 						}
 					]
 				},
@@ -4977,6 +5081,17 @@
 							"type": "INT",
 							"length": 0,
 							"foreignKey": true
+						},
+						{
+							"_type": "ERDColumn",
+							"_id": "AAAAAAGV4DB2ZyH9iuw=",
+							"_parent": {
+								"$ref": "AAAAAAGV3JVj/9VLvbk="
+							},
+							"name": "estado_id",
+							"type": "INT",
+							"length": 0,
+							"foreignKey": true
 						}
 					]
 				},
@@ -5107,7 +5222,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGV3Hl6IdUv1iM="
 					},
-					"name": "estado",
+					"name": "departamento",
 					"ownedElements": [
 						{
 							"_type": "ERDRelationship",
@@ -5145,7 +5260,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGV3JWN5tVlUFw="
 							},
-							"name": "estado_id",
+							"name": "departamento_id",
 							"type": "INT",
 							"length": 0,
 							"primaryKey": true
@@ -6043,7 +6158,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGV3LvVgdboPtY="
 							},
-							"name": "estado_id",
+							"name": "departamento_id",
 							"type": "INT",
 							"length": 0,
 							"foreignKey": true
@@ -6075,7 +6190,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGV3Lw6OdcEN0E="
 							},
-							"name": "estado_id",
+							"name": "departamento_id",
 							"type": "INT",
 							"length": 0,
 							"foreignKey": true
@@ -6621,6 +6736,37 @@
 							"_id": "AAAAAAGV3NyhdNi9LZQ=",
 							"_parent": {
 								"$ref": "AAAAAAGV3NxfWdiphc4="
+							},
+							"name": "nombre",
+							"type": "VARCHAR",
+							"length": 0
+						}
+					]
+				},
+				{
+					"_type": "ERDEntity",
+					"_id": "AAAAAAGV4DCj6iIFaU8=",
+					"_parent": {
+						"$ref": "AAAAAAGV3Hl6IdUv1iM="
+					},
+					"name": "estados",
+					"columns": [
+						{
+							"_type": "ERDColumn",
+							"_id": "AAAAAAGV4DCsniISuaA=",
+							"_parent": {
+								"$ref": "AAAAAAGV4DCj6iIFaU8="
+							},
+							"name": "estado_id",
+							"type": "INT",
+							"length": 0,
+							"primaryKey": true
+						},
+						{
+							"_type": "ERDColumn",
+							"_id": "AAAAAAGV4DDnOiIbOno=",
+							"_parent": {
+								"$ref": "AAAAAAGV4DCj6iIFaU8="
 							},
 							"name": "nombre",
 							"type": "VARCHAR",
