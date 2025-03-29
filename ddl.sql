@@ -4,29 +4,29 @@ USE campusdatabase;
 
 CREATE TABLE sedeCampus (
     sede_id INT PRIMARY KEY,
-    lugar VARCHAR(100)
+    lugar VARCHAR(30)
 );
 
 CREATE TABLE nivelriesgo (
     nivelriesgo_id INT PRIMARY KEY,
-    nombre VARCHAR(50)
+    nombre VARCHAR(15)
 );
 
 CREATE TABLE pais (
     pais_id INT PRIMARY KEY,
-    nombre VARCHAR(100)
+    nombre VARCHAR(20)
 );
 
 CREATE TABLE estado (
     estado_id INT PRIMARY KEY,
-    nombre VARCHAR(100),
+    nombre VARCHAR(20),
     pais_id INT,
     FOREIGN KEY (pais_id) REFERENCES pais(pais_id)
 );
 
 CREATE TABLE ciudad (
     ciudad_id INT PRIMARY KEY,
-    nombre VARCHAR(100),
+    nombre VARCHAR(20),
     zipcode VARCHAR(10),
     estado_id INT,
     FOREIGN KEY (estado_id) REFERENCES estado(estado_id)
@@ -34,7 +34,7 @@ CREATE TABLE ciudad (
 
 CREATE TABLE direccion (
     direccion_id INT PRIMARY KEY,
-    direccion VARCHAR(255),
+    direccion VARCHAR(50),
     ciudad_id INT,
     FOREIGN KEY (ciudad_id) REFERENCES ciudad(ciudad_id)
 );
@@ -47,7 +47,7 @@ CREATE TABLE telefonos (
 CREATE TABLE campers (
     camper_id INT PRIMARY KEY,
     sede_id INT,
-    nombre VARCHAR(100),
+    nombre VARCHAR(20),
     direccion_id INT,
     acudiente_id INT,
     nivelriesgo_id INT,
@@ -61,8 +61,8 @@ CREATE TABLE campers (
 
 CREATE TABLE acudientes (
     acudiente_id INT PRIMARY KEY,
-    nombre VARCHAR(100),
-    apellido VARCHAR(100),
+    nombre VARCHAR(20),
+    apellido VARCHAR(20),
     direccion_id INT,
     telefono_id INT,
     FOREIGN KEY (direccion_id) REFERENCES direccion(direccion_id),
@@ -77,8 +77,8 @@ CREATE TABLE horarios (
 
 CREATE TABLE trainers (
     trainer_id INT PRIMARY KEY,
-    nombre VARCHAR(100),
-    apellido VARCHAR(100),
+    nombre VARCHAR(20),
+    apellido VARCHAR(20),
     direccion_id INT,
     telefono_id INT,
     FOREIGN KEY (direccion_id) REFERENCES direccion(direccion_id),
@@ -87,7 +87,7 @@ CREATE TABLE trainers (
 
 CREATE TABLE skills (
     skill_id INT PRIMARY KEY,
-    nombre VARCHAR(100)
+    nombre VARCHAR(20)
 );
 
 CREATE TABLE conocimientoTrainer (
@@ -122,22 +122,22 @@ CREATE TABLE asignacionTrainer (
 
 CREATE TABLE backend (
     backend_id INT PRIMARY KEY,
-    nombre VARCHAR(100)
+    nombre VARCHAR(20)
 );
 
 CREATE TABLE sgbd (
     sgbd_id INT PRIMARY KEY,
-    nombre VARCHAR(100)
+    nombre VARCHAR(20)
 );
 
 CREATE TABLE programacionFormal (
     programacionformal_id INT PRIMARY KEY,
-    nombre VARCHAR(100)
+    nombre VARCHAR(20)
 );
 
 CREATE TABLE modulo (
     modulo_id INT PRIMARY KEY,
-    nombre VARCHAR(100)
+    nombre VARCHAR(20)
 );
 
 CREATE TABLE egresados (
