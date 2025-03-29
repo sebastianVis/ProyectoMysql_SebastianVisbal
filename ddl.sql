@@ -78,6 +78,7 @@ CREATE TABLE horarios (
 );
 
 CREATE TABLE rutaEntrenamiento (
+    nombre VARCHAR(50),
     ruta_id INT PRIMARY KEY AUTO_INCREMENT,
     horario_id INT,
     backend_id INT,
@@ -89,7 +90,6 @@ CREATE TABLE rutaEntrenamiento (
     FOREIGN KEY (programacionformal_id) REFERENCES programacionFormal(programacionformal_id),
     FOREIGN KEY (sgbd_id) REFERENCES sgbd(sgbd_id),
     FOREIGN KEY (sgbda_id) REFERENCES sgbd(sgbd_id)
-
 );
 
 CREATE TABLE acudientes (
@@ -97,28 +97,32 @@ CREATE TABLE acudientes (
     nombre VARCHAR(50),
     apellido VARCHAR(50),
     direccion_id INT,
-    telefono_id INT,
-    FOREIGN KEY (direccion_id) REFERENCES direccion(direccion_id),
-    FOREIGN KEY (telefono_id) REFERENCES telefonos(telefono_id)
+    FOREIGN KEY (direccion_id) REFERENCES direccion(direccion_id)
 );
 
 CREATE TABLE campers (
     camper_id INT PRIMARY KEY AUTO_INCREMENT,
     sede_id INT,
     nombre VARCHAR(50),
-    telefono_id INT,
     direccion_id INT,
     acudiente_id INT,
     nivelriesgo_id INT,
-    ruta_id INT,
-    modulo_id INT,
     estado_id INT,
     FOREIGN KEY (estado_id) REFERENCES estados(estado_id),
     FOREIGN KEY (sede_id) REFERENCES sedeCampus(sede_id),
     FOREIGN KEY (direccion_id) REFERENCES direccion(direccion_id),
     FOREIGN KEY (acudiente_id) REFERENCES acudientes(acudiente_id),
-    FOREIGN KEY (nivelriesgo_id) REFERENCES nivelriesgo(nivelriesgo_id),
-    FOREIGN KEY (telefono_id) REFERENCES telefonos(telefono_id)
+    FOREIGN KEY (nivelriesgo_id) REFERENCES nivelriesgo(nivelriesgo_id)
+);
+
+CREATE TABLE camperRuta (
+    camper_id INT,
+    ruta_id INT,
+    modulo_id INT,
+    PRIMARY KEY (camper_id, ruta_id, modulo_id),
+    FOREIGN KEY (camper_id) REFERENCES campers(camper_id),
+    FOREIGN KEY (ruta_id) REFERENCES rutaEntrenamiento(ruta_id),
+    FOREIGN KEY (modulo_id) REFERENCES modulo(modulo_id)
 );
 
 CREATE TABLE trainers (
@@ -126,8 +130,30 @@ CREATE TABLE trainers (
     nombre VARCHAR(50),
     apellido VARCHAR(50),
     direccion_id INT,
+    FOREIGN KEY (direccion_id) REFERENCES direccion(direccion_id)
+);
+
+CREATE TABLE camperTelefono(
+    camper_id INT,
     telefono_id INT,
-    FOREIGN KEY (direccion_id) REFERENCES direccion(direccion_id),
+    PRIMARY KEY (camper_id, telefono_id),
+    FOREIGN KEY (camper_id) REFERENCES campers(camper_id),
+    FOREIGN KEY (telefono_id) REFERENCES telefonos(telefono_id)
+);
+
+CREATE TABLE trainerTelefono(
+    trainer_id INT,
+    telefono_id INT,
+    PRIMARY KEY (trainer_id, telefono_id),
+    FOREIGN KEY (trainer_id) REFERENCES trainers(trainer_id),
+    FOREIGN KEY (telefono_id) REFERENCES telefonos(telefono_id)
+);
+
+CREATE TABLE acudienteTelefono(
+    acudiente_id INT,
+    telefono_id INT,
+    PRIMARY KEY (acudiente_id, telefono_id),
+    FOREIGN KEY (acudiente_id) REFERENCES acudientes(acudiente_id),
     FOREIGN KEY (telefono_id) REFERENCES telefonos(telefono_id)
 );
 
@@ -137,7 +163,7 @@ CREATE TABLE skills (
 );
 
 CREATE TABLE conocimientoTrainer (
-    trainer_id INT AUTO_INCREMENT,
+    trainer_id INT,
     skill_id INT,
     PRIMARY KEY (trainer_id, skill_id),
     FOREIGN KEY (trainer_id) REFERENCES trainers(trainer_id),
