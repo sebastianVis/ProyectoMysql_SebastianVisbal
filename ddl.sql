@@ -124,6 +124,15 @@ CREATE TABLE campers (
     FOREIGN KEY (nivelriesgo_id) REFERENCES nivelriesgo(nivelriesgo_id)
 );
 
+CREATE TABLE historialEstados (
+    historial_id INT PRIMARY KEY AUTO_INCREMENT,
+    camper_id INT,
+    estado_id INT,
+    fecha_cambio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (camper_id) REFERENCES campers(camper_id),
+    FOREIGN KEY (estado_id) REFERENCES estados(estado_id)
+);
+
 CREATE TABLE camperRuta (
     camper_id INT,
     ruta_id INT,

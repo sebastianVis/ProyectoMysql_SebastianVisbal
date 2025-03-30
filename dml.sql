@@ -73,7 +73,27 @@ INSERT INTO direccion (direccion, ciudad_id) VALUES
 ('Avenida Colombia #43-21', 1),
 ('Diagonal 7 #23-12', 2),
 ('Transversal 14 #65-78', 1),
-('Carrera 17 #12-34', 2);
+('Carrera 17 #12-34', 2),
+('Calle Los Nogales', 1),
+('Avenida Principal', 2),
+('Carrera 21', 1),
+('Pasaje La Loma', 2),
+('Diagonal San Martín', 1),
+('Callejón El Sol', 2),
+('Avenida Libertad', 1),
+('Camino Real', 2),
+('Calle 9 de Julio', 1),
+('Vereda La Esperanza', 2),
+('Boulevard Central', 1),
+('Calle Las Rosas', 2),
+('Avenida Los Pinos', 1),
+('Pasaje La Paz', 2),
+('Camino del Inca', 1),
+('Callejón del Viento', 2),
+('Carrera del Río', 1),
+('Avenida del Bosque', 2),
+('Diagonal La Cumbre', 1),
+('Calle San Pedro', 2);
 
 
 INSERT INTO telefonos (numero) VALUES
@@ -178,7 +198,27 @@ INSERT INTO acudientes (nombre, apellido, direccion_id) VALUES
 ('Raúl', 'Espinoza', 47),
 ('Patricia', 'Cáceres', 48),
 ('Héctor', 'Aguirre', 49),
-('Cecilia', 'Vargas', 50);
+('Cecilia', 'Vargas', 50),
+('Carlos', 'Fernández', 54),
+('María', 'Gómez', 55),
+('Juan', 'Pérez', 56),
+('Ana', 'López', 57),
+('Luis', 'Ramírez', 58),
+('Sofía', 'Díaz', 59),
+('Daniel', 'Herrera', 60),
+('Valentina', 'Vargas', 61),
+('Mateo', 'Ruiz', 62),
+('Camila', 'Castro', 63),
+('Alejandro', 'Fernández', 64),
+('Gabriela', 'Ortega', 65),
+('Sebastián', 'Jiménez', 66),
+('Isabella', 'Méndez', 67),
+('Tomás', 'Ríos', 68),
+('Renata', 'Navarro', 69),
+('Emiliano', 'Solano', 70),
+('Martina', 'Cárdenas', 54),
+('Joaquín', 'Pacheco', 55),
+('Paula', 'Salas', 56);
 
 INSERT INTO campers (sede_id, nombre, direccion_id, acudiente_id, nivelriesgo_id, estado_id) VALUES
 (1, 'Lucas Pérez', 1, 1, 1, 1),
@@ -233,7 +273,27 @@ INSERT INTO campers (sede_id, nombre, direccion_id, acudiente_id, nivelriesgo_id
 (2, 'Cecilia Vargas', 50, 50, 2, 4),
 (1, 'Héctor Miguelito', 1, 1, 1, 4),
 (2, 'Simon Manuelito', 2, 2, 1, 4),
-(1, 'Héctor Sinrutica', 1, 1, 1, 1);
+(1, 'Héctor Sinrutica', 1, 1, 1, 1),
+(1, 'Gabriel Mendoza', 51, 51, 1, 4),
+(2, 'Julieta Rojas', 52, 52, 2, 3),
+(1, 'Ezequiel Torres', 53, 53, 3, 7),
+(2, 'Carolina Pineda', 54, 54, 1, 6),
+(1, 'Bruno Esquivel', 55, 55, 2, 4),
+(2, 'Melissa Salgado', 56, 56, 3, 3),
+(1, 'Leonardo Fuentes', 57, 57, 1, 4),
+(2, 'Natalia Peña', 58, 58, 2, 3),
+(1, 'Damián Castillo', 59, 59, 3, 4),
+(2, 'Ximena Beltrán', 60, 60, 1, 3),
+(1, 'Raúl Villanueva', 61, 61, 2, 4),
+(2, 'Fernanda Lucero', 62, 62, 3, 4),
+(1, 'Adolfo Becerra', 63, 63, 1, 4),
+(2, 'Estefanía Araya', 64, 64, 2, 4),
+(1, 'Matías Gálvez', 65, 65, 3, 4),
+(2, 'Valeria Ponce', 66, 66, 1, 4),
+(1, 'Gustavo Ávila', 67, 67, 2, 4),
+(2, 'Tamara Cifuentes', 68, 68, 3, 4),
+(1, 'Francisco Del Valle', 69, 69, 1, 4),
+(2, 'Isidora Olivares', 70, 70, 2, 4);
 
 INSERT INTO camperTelefono (camper_id, telefono_id) VALUES
 (1, 1), (1, 2),
@@ -345,9 +405,8 @@ INSERT INTO rutaEntrenamiento (nombre, horario_id, backend_id, programacionforma
 ('Backend con Netcore', 1, 1, 1, 1, 2, 1),
 ('Backend con NodeJS', 2, 2, 2, 2, 1, 2);
 
-
 INSERT INTO trainers (nombre, apellido, direccion_id) VALUES
-('Diego', 'Ruiz', 1),
+('Jholver', 'Pardo', 1),
 ('Andrea', 'García', 2),
 ('Felipe', 'Torres', 3);
 
@@ -369,6 +428,7 @@ INSERT INTO conocimientoTrainer (trainer_id, skill_id) VALUES
 
 INSERT INTO asignacionTrainer (trainer_id, ruta_id, horario_id) VALUES
 (1, 1, 1),
+(1, 2, 2),
 (2, 2, 2);
 
 INSERT INTO camperRuta (camper_id, ruta_id, modulo_id) VALUES
@@ -423,7 +483,27 @@ INSERT INTO camperRuta (camper_id, ruta_id, modulo_id) VALUES
 (49, 1, 1),
 (50, 2, 2),
 (51, 1, 3),
-(52, 2, 1);
+(52, 2, 1),
+(54, 1, 1),
+(55, 2, 2),
+(56, 1, 3),
+(57, 2, 1),
+(58, 1, 2),
+(59, 2, 3),
+(60, 1, 1),
+(61, 2, 2),
+(62, 1, 3),
+(63, 2, 1),
+(64, 1, 2),
+(65, 2, 3),
+(66, 1, 1),
+(67, 2, 2),
+(68, 1, 3),
+(69, 2, 1),
+(70, 1, 2),
+(71, 2, 3),
+(72, 1, 1),
+(73, 2, 2);
 
 INSERT INTO evaluacion (camper_id, ruta_id, modulo_id, nota_teorica, nota_practica, nota_trabajo, nota_final) VALUES
 (1, 1, 2, 90.53, 84.82, 67.2, 80.85),
@@ -475,8 +555,35 @@ INSERT INTO evaluacion (camper_id, ruta_id, modulo_id, nota_teorica, nota_practi
 (47, 1, 1, 37.75, 49.21, 41.37, 42.78),
 (48, 2, 2, 58.59, 76.38, 70.32, 68.43),
 (49, 1, 2, 54.09, 55.93, 74.01, 61.34),
-(50, 2, 1, 71.91, 81.32, 57.77, 70.33);
+(50, 2, 1, 71.91, 81.32, 57.77, 70.33),
+(54, 1, 1, 88.5, 92.3, 85.4, 88.73),
+(55, 2, 2, 91.2, 85.7, 89.9, 88.93),
+(56, 1, 3, 87.4, 90.1, 92.0, 89.83),
+(57, 2, 1, 95.3, 89.6, 91.8, 92.23),
+(58, 1, 2, 90.8, 94.5, 88.2, 91.17),
+(59, 2, 3, 89.1, 91.3, 87.7, 89.37),
+(60, 1, 1, 92.0, 93.7, 90.5, 92.07),
+(61, 2, 2, 90.5, 88.6, 91.2, 90.10),
+(62, 1, 3, 86.9, 89.4, 90.8, 89.03),
+(63, 2, 1, 94.2, 90.1, 93.5, 92.60),
+(64, 1, 2, 45.3, 50.2, 48.1, 47.87),
+(65, 2, 3, 52.7, 49.5, 51.2, 51.13),
+(66, 1, 1, 40.6, 42.9, 39.8, 41.10),
+(67, 2, 2, 48.3, 44.7, 46.9, 46.63),
+(68, 1, 3, 39.9, 41.2, 38.7, 39.93),
+(69, 2, 1, 50.1, 47.6, 45.3, 47.67),
+(70, 1, 2, 42.8, 40.5, 44.1, 42.47),
+(71, 2, 3, 46.9, 48.2, 49.7, 48.27),
+(72, 1, 1, 41.5, 43.3, 40.9, 41.90),
+(73, 2, 2, 49.6, 46.2, 48.4, 48.07);
 
 
 INSERT INTO egresados (camper_id, ruta_id) VALUES (51, 1), (52, 2);
 
+INSERT INTO historialEstados (camper_id, estado_id, fecha_cambio) 
+VALUES 
+(1, 2, '2024-03-01 10:00:00'),
+(1, 3, '2024-03-15 12:00:00'),
+(2, 2, '2024-02-20 08:30:00'),
+(3, 3, '2024-03-10 15:45:00'),
+(1, 4, '2024-03-25 18:00:00');
