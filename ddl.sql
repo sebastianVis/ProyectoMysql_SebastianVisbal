@@ -49,7 +49,6 @@ CREATE TABLE telefonos (
     numero VARCHAR(15)
 );
 
--- Tablas relacionadas
 CREATE TABLE backend (
     backend_id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50)
@@ -70,7 +69,6 @@ CREATE TABLE modulo (
     nombre VARCHAR(50)
 );
 
--- Tablas dependientes
 CREATE TABLE horarios (
     horario_id INT PRIMARY KEY AUTO_INCREMENT,
     hora_inicio TIME,
@@ -78,8 +76,8 @@ CREATE TABLE horarios (
 );
 
 
-CREATE TABLE salones (
-    salon_id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE areas (
+    area_id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50),
     capacidad INT DEFAULT 33
 );
@@ -92,8 +90,8 @@ CREATE TABLE rutaEntrenamiento (
     programacionformal_id INT,
     sgbd_id INT,
     sgbda_id INT,
-    salon_id INT,
-    FOREIGN KEY (salon_id) REFERENCES salones(salon_id),
+    area_id INT,
+    FOREIGN KEY (area_id) REFERENCES areas(area_id),
     FOREIGN KEY (horario_id) REFERENCES horarios(horario_id),
     FOREIGN KEY (backend_id) REFERENCES backend(backend_id),
     FOREIGN KEY (programacionformal_id) REFERENCES programacionFormal(programacionformal_id),
@@ -124,6 +122,22 @@ CREATE TABLE campers (
     FOREIGN KEY (nivelriesgo_id) REFERENCES nivelriesgo(nivelriesgo_id)
 );
 
+CREATE TABLE estadosAsistencia(
+    estadoasistencia_id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(15)
+);
+
+CREATE TABLE asistencias (
+    asistencia_id INT PRIMARY KEY AUTO_INCREMENT,
+    camper_id INT,
+    area_id INT,
+    estadoasistencia_id INT,
+    fecha DATE NOT NULL,
+    FOREIGN KEY (camper_id) REFERENCES campers(camper_id),
+    FOREIGN KEY (estadoasistencia_id) REFERENCES estadosAsistencia(estadoasistencia_id),
+    FOREIGN KEY (area_id) REFERENCES areas(area_id)
+);
+
 CREATE TABLE historialEstados (
     historial_id INT PRIMARY KEY AUTO_INCREMENT,
     camper_id INT,
@@ -137,11 +151,13 @@ CREATE TABLE camperRuta (
     camper_id INT,
     ruta_id INT,
     modulo_id INT,
+    inscripcion DATE DEFAULT (CURDATE()),
     PRIMARY KEY (camper_id, ruta_id, modulo_id),
     FOREIGN KEY (camper_id) REFERENCES campers(camper_id),
     FOREIGN KEY (ruta_id) REFERENCES rutaEntrenamiento(ruta_id),
     FOREIGN KEY (modulo_id) REFERENCES modulo(modulo_id)
 );
+
 
 CREATE TABLE trainers (
     trainer_id INT PRIMARY KEY AUTO_INCREMENT,
