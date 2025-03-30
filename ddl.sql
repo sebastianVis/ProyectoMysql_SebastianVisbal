@@ -77,6 +77,13 @@ CREATE TABLE horarios (
     hora_fin TIME
 );
 
+
+CREATE TABLE salones (
+    salon_id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    capacidad INT DEFAULT 33
+);
+
 CREATE TABLE rutaEntrenamiento (
     nombre VARCHAR(50),
     ruta_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -85,6 +92,8 @@ CREATE TABLE rutaEntrenamiento (
     programacionformal_id INT,
     sgbd_id INT,
     sgbda_id INT,
+    salon_id INT,
+    FOREIGN KEY (salon_id) REFERENCES salones(salon_id),
     FOREIGN KEY (horario_id) REFERENCES horarios(horario_id),
     FOREIGN KEY (backend_id) REFERENCES backend(backend_id),
     FOREIGN KEY (programacionformal_id) REFERENCES programacionFormal(programacionformal_id),
