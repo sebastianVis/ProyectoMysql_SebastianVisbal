@@ -403,6 +403,8 @@ INSERT INTO areas(nombre) VALUES ('Apolo'), ('Sputnik'), ('Artemis'), ('Naves');
 
 INSERT INTO rutaEntrenamiento (nombre, horario_id, backend_id, programacionformal_id, sgbd_id, sgbda_id, area_id) VALUES
 ('Backend con Netcore', 1, 1, 1, 1, 2, 1),
+('Backend con NodeJS', 2, 1, 2, 2, 1, 2),
+('Backend con Netcore', 1, 2, 1, 1, 2, 1),
 ('Backend con NodeJS', 2, 2, 2, 2, 1, 2);
 
 INSERT INTO trainers (nombre, apellido, direccion_id) VALUES
