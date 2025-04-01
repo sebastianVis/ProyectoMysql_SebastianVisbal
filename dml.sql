@@ -394,10 +394,7 @@ INSERT INTO programacionFormal (nombre) VALUES
 ('JavaScript'),
 ('C#');
 
-INSERT INTO modulo (nombre) VALUES
-('Introduccion'),
-('Backend'),
-('SQL');
+INSERT INTO estadomodulo (nombre) VALUES ('Pendiente'), ('En Curso'), ('Aprobado'), ('Reprobado');
 
 INSERT INTO areas(nombre) VALUES ('Apolo'), ('Sputnik'), ('Artemis'), ('Naves');
 
@@ -406,6 +403,12 @@ INSERT INTO rutaEntrenamiento (nombre, horario_id, backend_id, programacionforma
 ('Backend con NodeJS', 2, 1, 2, 2, 1, 2),
 ('Backend con Netcore', 1, 2, 1, 1, 2, 1),
 ('Backend con NodeJS', 2, 2, 2, 2, 1, 2);
+
+INSERT INTO modulo (nombre, estadomodulo_id, ruta_id) VALUES 
+('Introducción a la Programación', 1, 1),
+('Estructuras de Datos', 1, 1),
+('Bases de Datos SQL', 1, 1),
+('Desarrollo Backend', 1, 1);
 
 INSERT INTO trainers (nombre, apellido, direccion_id) VALUES
 ('Jholver', 'Pardo', 1),

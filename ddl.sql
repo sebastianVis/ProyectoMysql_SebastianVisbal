@@ -64,11 +64,6 @@ CREATE TABLE programacionFormal (
     nombre VARCHAR(50)
 );
 
-CREATE TABLE modulo (
-    modulo_id INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(50)
-);
-
 CREATE TABLE horarios (
     horario_id INT PRIMARY KEY AUTO_INCREMENT,
     hora_inicio TIME,
@@ -80,6 +75,13 @@ CREATE TABLE areas (
     area_id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50),
     capacidad INT DEFAULT 33
+);
+
+
+
+CREATE TABLE estadoModulo (
+    estadomodulo_id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(20)
 );
 
 CREATE TABLE rutaEntrenamiento (
@@ -97,6 +99,16 @@ CREATE TABLE rutaEntrenamiento (
     FOREIGN KEY (programacionformal_id) REFERENCES programacionFormal(programacionformal_id),
     FOREIGN KEY (sgbd_id) REFERENCES sgbd(sgbd_id),
     FOREIGN KEY (sgbda_id) REFERENCES sgbd(sgbd_id)
+);
+
+
+CREATE TABLE modulo (
+    modulo_id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    estadomodulo_id INT,
+    ruta_id INT,
+    FOREIGN KEY (ruta_id) REFERENCES rutaEntrenamiento(ruta_id),
+    FOREIGN KEY (estadomodulo_id) REFERENCES estadomodulo(estadomodulo_id)
 );
 
 CREATE TABLE acudientes (
@@ -231,7 +243,7 @@ CREATE TABLE evaluacion (
     nota_trabajo DECIMAL(5,2),
     nota_final DECIMAL(5,2),
     PRIMARY KEY (camper_id, ruta_id, modulo_id),
-    FOREIGN KEY (camper_id) REFERENCES campers(camper_id),
-    FOREIGN KEY (ruta_id) REFERENCES rutaEntrenamiento(ruta_id),
+    FOREIGN KEY (camper_id) REFERENCES camperRuta(camper_id),
+    FOREIGN KEY (ruta_id) REFERENCES camperRuta(ruta_id),
     FOREIGN KEY (modulo_id) REFERENCES modulo(modulo_id)
 );
