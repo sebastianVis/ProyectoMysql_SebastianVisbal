@@ -214,8 +214,7 @@ BEGIN
     UPDATE evaluacion
     SET ruta_id = NEW.ruta_id
     WHERE camper_id = NEW.camper_id;
-END;
-//
+END //
 DELIMITER ;
 
 -- 14. Al insertar un nuevo camper, verificar si ya existe por número de documento.
