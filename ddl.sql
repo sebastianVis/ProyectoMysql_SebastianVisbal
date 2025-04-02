@@ -70,11 +70,17 @@ CREATE TABLE horarios (
     hora_fin TIME
 );
 
+CREATE TABLE estadoarea (
+    estadoarea_id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50)
+);
 
 CREATE TABLE areas (
     area_id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50),
-    capacidad INT DEFAULT 33
+    estadoarea_id INT DEFAULT 1,
+    capacidad INT DEFAULT 33,
+    FOREIGN KEY (estadoarea_id) REFERENCES estadoarea(estadoarea_id)
 );
 
 
@@ -246,4 +252,9 @@ CREATE TABLE evaluacion (
     FOREIGN KEY (camper_id) REFERENCES camperRuta(camper_id),
     FOREIGN KEY (ruta_id) REFERENCES camperRuta(ruta_id),
     FOREIGN KEY (modulo_id) REFERENCES modulo(modulo_id)
+);
+
+CREATE TABLE trainernotificaciones (
+    trainer_id INT,
+    notificacion VARCHAR(255)
 );

@@ -171,7 +171,6 @@ JOIN trainers t ON at.trainer_id = t.trainer_id
 GROUP BY t.trainer_id
 ORDER BY promedio_rendimiento DESC;
 
-
 -- 9. Listar los mejores 5 campers por nota final en cada ruta.
 
 SELECT 

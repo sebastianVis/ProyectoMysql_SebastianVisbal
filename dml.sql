@@ -396,6 +396,9 @@ INSERT INTO programacionFormal (nombre) VALUES
 
 INSERT INTO estadomodulo (nombre) VALUES ('Pendiente'), ('En Curso'), ('Aprobado'), ('Reprobado');
 
+
+INSERT INTO estadoarea(nombre) VALUES ('Activo'), ('Inactivo');
+
 INSERT INTO areas(nombre) VALUES ('Apolo'), ('Sputnik'), ('Artemis'), ('Naves');
 
 INSERT INTO rutaEntrenamiento (nombre, horario_id, backend_id, programacionformal_id, sgbd_id, sgbda_id, area_id) VALUES
@@ -414,6 +417,7 @@ INSERT INTO trainers (nombre, apellido, direccion_id) VALUES
 ('Jholver', 'Pardo', 1),
 ('Andrea', 'García', 2),
 ('Felipe', 'Torres', 3);
+
 
 INSERT INTO trainerTelefono (trainer_id, telefono_id) VALUES
 (1, 2),
